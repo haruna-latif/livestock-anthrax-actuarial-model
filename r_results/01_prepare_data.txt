@@ -1,0 +1,7 @@
+raw rows 16283  after de-dup 12107  duplicates removed 4176 
+species case records: 6757  flagged A/B/C: 3 9 2  any: 14 
+units 5087  2026 units 40  wild-only units (2005-2025): 83  outbreaks in them: 1005 
+severity units: all 4648  of which 2026: 27 ; outbreaks all 19459  of which 2026: 38 
+2026 severity units by structure: Jan-Jun 16 Jul-Dec 11 
+country-years (2005-2025): 1134  with Nout>0: 1027  outbreaks: 19658 
+2026 reported to date: outbreaks 41  countries 12  linked cases 131 

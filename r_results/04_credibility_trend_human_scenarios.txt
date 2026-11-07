@@ -1,0 +1,61 @@
+== Buhlmann credibility ==
+countries 80 EPV s2 0.63 VHM a 1.356 k 0.464 Z median 0.956 range 0.866 0.97 
+Holdout 2020-2025 countries 57 
+             RMSE   MAE
+Global mean 1.201 1.016
+Own mean    0.988 0.741
+Buhlmann    0.965 0.730
+MAE(cred)-MAE(own): -0.0113 CI -0.026 0.004 | MAE(cred)-MAE(global): -0.2821 CI -0.5 -0.05 
+Point differences in MAE (reported in the paper): cred - global -0.286 | cred - own -0.0115; intervals above are percentile intervals of the 2,000 resamples
+actuar::cm check: unbiased 1.3556 0.6296  own a 1.3556 s2 0.6296 
+
+== OLS trend in log outbreaks per affected country-year ==
+slope -0.0208 = -2.06 % per year; iid SE 0.0075 | cluster-resampling SE 0.0081 95% CI (%/yr) -3.56 -0.51 
+ Year Outbreaks Countries
+ 2005      1041        59
+ 2006      3161        57
+ 2007      1480        58
+ 2008      1160        57
+ 2009       884        52
+ 2010      1397        55
+ 2011      1011        52
+ 2012      1094        67
+ 2013      1191        59
+ 2014       906        59
+ 2015      1139        56
+ 2016       787        59
+ 2017       719        50
+ 2018       703        50
+ 2019       715        45
+ 2020       360        30
+ 2021       387        29
+ 2022       466        32
+ 2023       280        32
+ 2024       396        34
+ 2025       381        35
+
+== Human spillover scenario (thinning of the fitted outbreak counts) ==
+     p    mm P_any   mean VaR95 VaR99
+ 0.010  5.00 0.111  0.966     6    16
+ 0.050  5.00 0.315  4.865    20    59
+ 0.070  5.00 0.376  6.800    28    78
+ 0.105  5.00 0.461 10.186    40   112
+ 0.250  5.00 0.664 24.297    95   249
+ 0.010  9.76 0.112  1.911    12    31
+ 0.050  9.76 0.314  9.491    39   111
+ 0.070  9.76 0.380 13.330    53   150
+ 0.105  9.76 0.461 19.920    79   217
+ 0.250  9.76 0.665 47.516   187   480
+ 0.010 15.00 0.112  2.934    18    47
+ 0.050 15.00 0.314 14.591    60   174
+ 0.070 15.00 0.378 20.442    83   231
+ 0.105 15.00 0.463 30.640   121   327
+ 0.250 15.00 0.663 72.992   284   745
+Distribution choice (p=.105,m=9.76):
+      ZT-Poisson ZT-Geometric
+mean        19.9         19.9
+VaR99      218.0        230.0
+Check E[H] = p*E[N]*m = 19.6 
+
+Susceptible animals per outbreak (units with susceptible counts, n = 3997 ): outbreak-weighted mean 2096 median unit 146 
+Ring-vaccination cost per affected country-year (USD) = E[N] x susceptible per outbreak x 0.21 = 8423 ; range using median: 586 

@@ -1,0 +1,18 @@
+sum of mixture pmf                                                   1.0000       1.0000  OK
+mixture mean: pmf sum vs analytic                                   19.1411      19.1411  OK
+mixture log-lik: stored vs recomputed                            -3379.7807   -3379.7807  OK
+lognormal mu: closed form vs optim                                   1.4850       1.4853  OK
+lognormal sigma: closed form vs optim                                1.0336       1.0337  OK
+LEV lognormal u=1000: formula vs integral                            7.5325       7.5325  OK
+LEV Pareto u=1000: formula vs integral                               8.0483       8.0483  OK
+2nd limited moment lognormal u=1000 vs integral                    165.1053     165.1053  OK
+E[S] capped lognormal: analytic vs fresh simulation                144.1811     144.5727  OK
+SD[S]: analytic vs simulation                                      626.3231     630.6006  OK
+test country-years                                                 186.0000     186.0000  OK
+exceedances of the stored 95% VaR                                   11.0000      11.0000  OK
+outbreaks in analysis frame (country-years with >=1)             19658.0000   19658.0000  OK
+affected country-years                                            1027.0000    1027.0000  OK
+severity outbreaks 2005-2025 (excl. 2026)                        19421.0000   19421.0000  OK
+2026 severity outbreaks                                             38.0000      38.0000  OK
+
+Empirical-count aggregate (resample observed N): mean 144.4 VaR95 577 VaR99 1473 | mixture: 144.6 567 1454 

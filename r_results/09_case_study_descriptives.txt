@@ -1,0 +1,11 @@
+Ethiopia: years 21 | outbreaks 6759 | cases 72601 | overall cases/outbreak 10.7 | yearly range 3.1 (2006) to 62.1 (2024) | median 13.7
+   2005-2019 cases/outbreak 9.6 | 2020-2025 30.9 | outbreaks/yr 426 -> 63
+Türkiye (Rep. of): years 21 | outbreaks 2279 | cases 18473 | overall cases/outbreak 8.1 | yearly range 2.6 (2010) to 25.1 (2024) | median 6.6
+   2005-2019 cases/outbreak 6.9 | 2020-2025 10.6 | outbreaks/yr 103 -> 122
+Tanzania: years 13 | outbreaks 74 | cases 365 | overall cases/outbreak 4.9 | yearly range 1.0 (2015) to 73.0 (2022) | median 3.7
+   2005-2019 cases/outbreak 3.9 | 2020-2025 23.2 | outbreaks/yr 6 -> 2
+Zimbabwe: years 19 | outbreaks 553 | cases 2778 | overall cases/outbreak 5.0 | yearly range 1.0 (2021) to 8.6 (2011) | median 3.7
+   2005-2019 cases/outbreak 5.2 | 2020-2025 1.6 | outbreaks/yr 37 -> 6
+India: years 21 | outbreaks 1098 | cases 8376 | overall cases/outbreak 7.6 | yearly range 1.6 (2022) to 27.1 (2009) | median 6.3
+   2005-2019 cases/outbreak 8.2 | 2020-2025 4.6 | outbreaks/yr 62 -> 27
+ALL: cases/outbreak NA ; share of outbreaks Ethiopia 34.4% Turkiye 11.6%
