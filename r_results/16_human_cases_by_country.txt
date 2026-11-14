@@ -1,0 +1,76 @@
+affected country-years: 1027  outbreaks: 19658  countries: 105 
+lambda for m = 9.76: 9.759465 
+
+World totals 2005-2025 (mean human cases): low 9593.104  base 20145.52  high 47965.52 
+World base per year (21 years): 959.3104 
+World base total 90% range: 19419 20881 
+                  Country   Region Outbreaks Affected_years
+                 Ethiopia   Africa      6759             21
+        Türkiye (Rep. of)     Asia      2279             21
+              Afghanistan     Asia      1812             16
+                    India     Asia      1098             21
+                 Zimbabwe   Africa       553             19
+                    Kenya   Africa       462             21
+                     Iran     Asia       446             20
+                    Niger   Africa       444             13
+ China (People's Rep. of)     Asia       380             21
+                 Mongolia     Asia       368             17
+                Guatemala Americas       309             12
+                   Guinea   Africa       300             15
+                   Jordan     Asia       277             17
+                   Canada Americas       254             14
+                  Albania   Europe       221             17
+ Outbreaks_per_affected_year Mean_total_low Mean_total_base Mean_total_high
+                      321.86         3298.4          6926.6         16492.0
+                      108.52         1112.2          2335.5          5560.8
+                      113.25          884.3          1856.9          4421.3
+                       52.29          535.8          1125.2          2679.1
+                       29.11          269.9           566.7          1349.3
+                       22.00          225.5           473.5          1127.3
+                       22.30          217.6           457.1          1088.2
+                       34.15          216.7           455.0          1083.4
+                       18.10          185.4           389.4           927.2
+                       21.65          179.6           377.1           897.9
+                       25.75          150.8           316.7           754.0
+                       20.00          146.4           307.4           732.0
+                       16.29          135.2           283.9           675.9
+                       18.14          124.0           260.3           619.8
+                       13.00          107.8           226.5           539.2
+ Base_90pct_low Base_90pct_high Base_per_affected_year P_any_human_case_base
+           6500            7357                 329.84                     1
+           2085            2584                 111.22                     1
+           1638            2079                 116.06                     1
+            955            1299                  53.58                     1
+            447             692                  29.83                     1
+            365             589                  22.55                     1
+            350             569                  22.85                     1
+            349             569                  35.00                     1
+            289             494                  18.54                     1
+            281             480                  22.18                     1
+            227             412                  26.39                     1
+            220             398                  20.50                     1
+            199             374                  16.70                     1
+            180             346                  18.59                     1
+            151             308                  13.32                     1
+ Share_of_world_total
+              0.34383
+              0.11593
+              0.09218
+              0.05586
+              0.02813
+              0.02350
+              0.02269
+              0.02259
+              0.01933
+              0.01872
+              0.01572
+              0.01526
+              0.01409
+              0.01292
+              0.01124
+
+Top 5 share: 0.6359243  Top 10 share: 0.742751 
+Countries with expected base total below 1: 0  below 10: 27 
+
+Zimbabwe 2010-2018: WAHIS outbreaks 279; scenario mean 286 (90% range 202 to 375); published human cases 903 (Mukarati et al. 2020, 2010-2018)
+India 2005-2022: WAHIS outbreaks 1001; scenario mean 1026 (90% range 864 to 1190); published human cases 1778 (Puttahonnappa et al. 2025, 1990-2022, longer period)

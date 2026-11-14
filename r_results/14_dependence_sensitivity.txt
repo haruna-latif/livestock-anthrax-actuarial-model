@@ -1,0 +1,22 @@
+== A. Outbreaks per unit (division x half-year) ==
+units 4648 outbreaks 19459  mean outbreaks per unit 4.19  outbreak-weighted mean unit size 213.4  median 1  90th pct 6 
+
+== B. Aggregate loss when outbreaks share one average within a cluster of m outbreaks (lognormal, limit 1,000) ==
+m = 1 is the model in the paper (independent outbreaks); larger m means outbreaks of a unit move together; m = N makes the whole country-year one cluster (upper bound).
+       cluster_size  mean   sd VaR95 VaR99 TVaR99
+                  1 144.9  627   569  1483   4729
+                  2 144.9  627   574  1522   4732
+                  4 145.0  631   579  1603   4761
+                 10 145.2  642   598  1734   4854
+                 20 145.2  653   595  1949   4972
+ whole country-year 146.9 1312   476  2036   6202
+Observed 2020-2025 aggregate: see out-of-sample table; observed mean per country-year (linked records) is about 164.5 against the model mean 144.2 
+
+== C. Intraclass correlation of unit averages within countries (one-way ANOVA estimator) ==
+ICC of log(cases per outbreak) by country: 0.247  | ICC of cases per outbreak: 0.07  | countries 103 
+
+== D. Data description numbers ==
+share of outbreak-weighted units with a whole-number average: 0.285  exactly one case: 0.125 
+rows in the export for 2026: 69 
+lognormal mixture: P(cases per outbreak > 250) = 0.000231  | lognormal: 4.71e-05 
+zero-truncated class means of N: 8.87 121 404.5 (untruncated means: 2.63 121 398.78 )

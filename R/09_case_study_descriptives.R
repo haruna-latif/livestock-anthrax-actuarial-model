@@ -1,0 +1,5 @@
+d <- readRDS("working_files/data_prepared.rds"); cy <- d$cy2; cy <- cy[!is.na(cy$Nout),]
+for(p in c("^Ethiopia$","rkiye","^Tanzania$","^Zimbabwe$","^India$")){ z <- cy[grepl(p,cy$Country),]; z$cpo <- z$CasesL/z$Nout
+  cat(sprintf("%s: years %d | outbreaks %d | cases %d | overall cases/outbreak %.1f | yearly range %.1f (%d) to %.1f (%d) | median %.1f\n", z$Country[1], nrow(z), sum(z$Nout), sum(z$CasesL), sum(z$CasesL)/sum(z$Nout), min(z$cpo), z$Year[which.min(z$cpo)], max(z$cpo), z$Year[which.max(z$cpo)], median(z$cpo)))
+  pre <- z[z$Year<=2019,]; post <- z[z$Year>=2020,]; if(nrow(post)) cat(sprintf("   2005-2019 cases/outbreak %.1f | 2020-2025 %.1f | outbreaks/yr %.0f -> %.0f\n", sum(pre$CasesL)/sum(pre$Nout), sum(post$CasesL)/sum(post$Nout), mean(pre$Nout), mean(post$Nout))) }
+all <- cy; cat(sprintf("ALL: cases/outbreak %.2f ; share of outbreaks Ethiopia %.1f%% Turkiye %.1f%%\n", sum(all$CasesL)/sum(all$Nout), 100*sum(all$Nout[all$Country=="Ethiopia"])/sum(all$Nout), 100*sum(all$Nout[grepl("rkiye",all$Country)])/sum(all$Nout)))

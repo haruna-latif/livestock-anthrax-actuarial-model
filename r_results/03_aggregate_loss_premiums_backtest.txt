@@ -1,0 +1,91 @@
+2-lognormal mixture: ll -13558.6  params 0.033 1.394 0.919 4.145 0.559 (single lognormal ll -13651.4 )
+LR statistic vs single lognormal: 185.6 on 3 df
+
+=== AGGREGATE (collective risk model) per affected country-year ===
+          severity  cap   EX ES_analytic ES_sim SD_analytic SD_sim VaR95 VaR99
+         Lognormal none 7.53       144.2  146.2         626    635   574  1501
+         Lognormal 1000 7.53       144.2  144.7         626    631   567  1450
+ Lognormal mixture none 8.38       160.4  158.9         699    677   628  1632
+ Lognormal mixture 1000 8.38       160.4  158.2         699    682   629  1627
+            Pareto none 8.05       154.1  156.1         670    693   620  1581
+            Pareto 1000 8.05       154.1  154.8         670    674   615  1588
+ TVaR99
+   4796
+   4730
+   5083
+   5015
+   5119
+   5020
+
+Normal approximation vs simulation (lognormal, cap 1000): VaR95 1174 vs 567 ; VaR99 1601 vs 1450 
+
+Premium per affected country-year, animal cases (cap 1000)
+          severity pure EV20 EV50 Var_a1e4 SD_b10 SD_b25
+         Lognormal  144  173  216      183    207    301
+ Lognormal mixture  160  193  241      209    230    335
+            Pareto  154  185  231      199    221    322
+
+Excess-of-loss layer (retention d up to 1000): expected reinsurer cost
+          severity retention layer_per_outbreak reinsurer_per_country_year
+         Lognormal        50              0.239                       4.57
+         Lognormal       100              0.051                       0.97
+         Lognormal       250              0.004                       0.07
+ Lognormal mixture        50              0.998                      19.10
+ Lognormal mixture       100              0.293                       5.62
+ Lognormal mixture       250              0.013                       0.24
+            Pareto        50              0.419                       8.01
+            Pareto       100              0.123                       2.35
+            Pareto       250              0.019                       0.37
+ share_of_ES
+       0.032
+       0.007
+       0.000
+       0.119
+       0.035
+       0.002
+       0.052
+       0.015
+       0.002
+
+Aggregate stop-loss: pure premium E[(S-d)+] with retention at the stated percentile of S
+          severity retention_level    d stop_loss_premium share_of_ES
+         Lognormal        90th pct  254             75.99      0.5252
+         Lognormal        95th pct  567             54.84      0.3790
+         Lognormal        99th pct 1450             32.81      0.2267
+ Lognormal mixture        90th pct  294             81.44      0.5147
+ Lognormal mixture        95th pct  629             58.62      0.3705
+ Lognormal mixture        99th pct 1627             33.88      0.2142
+            Pareto        90th pct  276             81.08      0.5238
+            Pareto        95th pct  615             58.18      0.3759
+            Pareto        99th pct 1588             34.32      0.2218
+
+=== OUT-OF-SAMPLE BACKTEST ===
+test country-years 186 countries 63 | observed mean S* 141.2 median 15 max 3718 
+Lognormal : predicted mean 149.1 
+Lognormal mixture : predicted mean 164.4 
+          severity level  VaR exceedances  rate expected binom_p       block_CI
+         Lognormal  0.90  257          17 0.091     18.6   0.807 0.018 to 0.184
+         Lognormal  0.95  582          11 0.059      9.3   0.502     0 to 0.144
+         Lognormal  0.99 1678           4 0.022      1.9   0.118     0 to 0.057
+ Lognormal mixture  0.90  294          15 0.081     18.6   0.463 0.006 to 0.177
+ Lognormal mixture  0.95  641          11 0.059      9.3   0.502     0 to 0.149
+ Lognormal mixture  0.99 1857           4 0.022      1.9   0.118     0 to 0.058
+95% exceedances by country:
+
+         Ethiopia Türkiye (Rep. of) 
+                6                 5 
+Approximate power of the exact binomial test (two-sided 5%, n = 186 ): 99% level vs true 2%: 0.17 , vs 3%: 0.49 ; 95% level vs true 8%: 0.32 
+
+=== INFLUENCE: leave-one-country-out (lognormal, uncapped and cap 1000) ===
+                      dropped n_cy    EN   EX ES_cap VaR95 VaR99 TVaR99
+                              1027 19.14 7.53  144.2   560  1420   4439
+                     Ethiopia 1006 12.82 5.94   76.2   314   836   1192
+            Türkiye (Rep. of) 1006 17.28 7.62  131.6   380  1473   4799
+ Ethiopia + Türkiye (Rep. of)  985 10.78 5.69   61.4   224   707   1122
+
+=== COUNTRY-CLUSTERED BOOTSTRAP (B = 150): lognormal, uncapped and cap 1000 ===
+completed 150 
+      ES_cap VaR95_cap VaR99_cap ES_unc EN
+2.5%    48.5     186.3     385.8   48.5  9
+50%    130.2     483.7    1284.2  130.2 18
+97.5%  302.2    1141.8    5321.3  302.2 35
